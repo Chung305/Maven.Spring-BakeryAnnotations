@@ -2,15 +2,20 @@ package com.zipcodewilmington.bakery.controllers;
 
 import com.zipcodewilmington.bakery.models.Baker;
 import com.zipcodewilmington.bakery.services.BakerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 public class BakerController {
-    private BakerService service;
 
+    private BakerService service;
+    @Autowired
     public BakerController(BakerService service) {
         this.service = service;
     }
+
 
     public ResponseEntity<Iterable<Baker>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
