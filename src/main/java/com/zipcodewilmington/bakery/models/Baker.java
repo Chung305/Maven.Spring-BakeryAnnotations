@@ -1,9 +1,7 @@
 package com.zipcodewilmington.bakery.models;
 
 
-import sun.util.resources.Bundles;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
